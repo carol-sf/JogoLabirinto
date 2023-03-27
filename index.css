@@ -1,3 +1,33 @@
+.inicio-chegada {
+    font: bold 20pt Arial;
+    background: rgb(53, 184, 140);
+    color: white;
+    width: 150px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.labirinto {
+    background-color: white;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.maior {
+    width: 600px;
+    height: 600px;
+    background: black;
+    margin: 3% auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #status {
     background-color: white;
     position: fixed;
@@ -6,13 +36,14 @@
     border-radius: 25px;
     text-align: center;
     display: none;
+
 }
 
-#status-titulo {
+#statusTitulo {
     font-size: 50pt;
 }
 
-#btnTentarNovamente {
+#btnStatus {
     background-color: red;
     color: white;
     border-style: none;
@@ -21,38 +52,4 @@
     padding: 2% 6%;
     font-size: 18pt;
     border-radius: 25px;
-}
-
-#campo {
-    background-color: black;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.labirinto {
-    background-color: white;
-    width: 70%;
-    height: 55px;
-    display: flex;
-    justify-content: space-between;
-}
-
-#inicio {
-    /* width: 55px; */
-    /* height: 55px; */
-    background-color: aqua;
-    padding: 15px;
-    /* color: white; */
-    font-weight: bold;
-    font-size: 16pt;
-}
-
-#chegada {
-    background-color: aqua;
-    padding: 15px;
-    font-weight: bold;
-    font-size: 16pt;
-    width: 15%;
 }

@@ -1,70 +1,59 @@
-let inicio = document.querySelector('#inicio');
-let labirinto = document.querySelector('.labirinto');
-let chegada = document.querySelector('#chegada');
-let btnTentarNovamente = document.querySelector('#btnTentarNovamente');
-let iniciado = 0;
-let perdido = 0;
+let campo = document.querySelector('#campo');
+let emAndamento = 0;
 let vencido = 0;
 
-labirinto.addEventListener('mouseout', perdeu);
-// inicio.addEventListener('mouseenter', iniciou);
-// chegada.addEventListener('mouseenter', venceu);
-btnTentarNovamente.addEventListener('click', tentarNovamente);
+
+
+let labirinto = document.querySelector('.labirinto');
+let inicio = document.querySelector('#inicio');
+let chegada = document.querySelector('#chegada');
+let btnStatus = document.querySelector('#btnStatus');
+let iniciado = 0;
+
+labirinto.addEventListener('mouseleave', perdeu);
+inicio.addEventListener('mouseleave', iniciou);
+chegada.addEventListener('mouseenter', venceu);
+btnStatus.addEventListener('click', jogar)
 
 function perdeu() {
-    console.log('você perdeu!');
+    if (iniciado == 1) {
+        let status = document.querySelector('#status');
+        status.style.display = 'block';
+    }
 }
 
+function iniciou() {
+    iniciado = 1;
+}
 
-// function iniciou() {
-//     iniciado = 1;
-//     perdido = 0;
-//     vencido = 0;
-// }
+function venceu() {
+    if (iniciado == 1) {
+        let status = document.querySelector('#status');
+        let statusTitulo = document.querySelector('#statusTitulo');
 
-// function perdeu() {
-//     perdido = 1;
-//     // iniciado = 0;
-//     // vencido = 0;
-//     console.log('perdido' + iniciado + perdido + vencido);
+        status.style.display = 'block';
+        statusTitulo.innerHTML = 'Você venceu!';
+        btnStatus.innerHTML = 'Proxima fase';
+        btnStatus.style.background = 'rgb(53, 184, 140)'
+    }
+}
 
-//     jogo();
-// }
-
-// function venceu() {
-//     vencido = 1;
-//     // perdido = 0;
-//     // iniciado = 0;
-//     console.log('vencido:' + iniciado + perdido + vencido);
-
-//     jogo();
-// }
-
-// function jogo() {
-//     if (iniciado == 1 && vencido == 1) {
-//         console.log("jogo vencido");
-//     }
-//     if (iniciado == 1 && perdido == 1) {
-//         console.log("jogo perdido");
-//     }
-// }
-
-// function sair() {
-//     // if (chegada.addEventListener('mouseenter', finalizarJogo)) {
-//     //     console.log('teste');
-//     // } else 
-//     if (jogoIniciado == 1) {
-// let status = document.querySelector('#status');
-// labirinto.style.background = 'red';
-// status.style.display = 'block';
-//     }
-// }
-
-function tentarNovamente() {
+function jogar() {
     let status = document.querySelector('#status');
-    status.style.display = 'none';
-    labirinto.style.background = 'white';
+    let statusTitulo = document.querySelector('#statusTitulo');
+    
+    status.style.display = 'block';
+    statusTitulo.innerHTML = 'Você perdeu!';
+    btnStatus.innerHTML = 'Tentar novamente';
+    btnStatus.style.background = 'red'
     iniciado = 0;
-    perdido = 0;
-    console.log('tentar novamente' + iniciado + perdido + vencido);
+
+    if(btnStatus.innerHTML == 'Tentar novamente') {
+        let status = document.querySelector('#status');
+        status.style.display = 'none';
+    } else {
+        console.log('proxima fase');
+        let status = document.querySelector('#status');
+        status.style.display = 'none';
+    }
 }
