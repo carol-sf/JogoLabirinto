@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="campo">
+        <div class="labirinto l1">
+            <div id="inicio" class="inicio-chegada">
+                inicio
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let labirinto = document.querySelector('.labirinto');
+        labirinto.addEventListener('mouseleave', saiuDoLabirinto);
+
+        function saiuDoLabirinto() {
+            console.log('saiu do labirinto');            
+        }
+
+        let campo = document.querySelector('#campo');
+        campo.addEventListener('mousemove', entrouNoCampo); 
+
+        function entrouNoCampo() {
+            console.log('entrou no campo');
+        }
+    </script>
+</body>
+
+</html>
