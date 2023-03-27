@@ -17,9 +17,11 @@
     border-radius: 10px;
 }
 
-.maior {
-    width: 600px;
-    height: 600px;
+#campo {
+    /* width: 600px;
+    height: 600px; */
+    height: 80vh;
+    width: 90%;
     background: black;
     margin: 3% auto;
     border-radius: 10px;
@@ -52,4 +54,8 @@
     padding: 2% 6%;
     font-size: 18pt;
     border-radius: 25px;
+}
+
+#tituloFase {
+    margin-left: 5%;
 }
