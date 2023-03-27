@@ -1,0 +1,31 @@
+.inicio-chegada {
+    font: bold 20pt Arial;
+    background: rgb(53, 184, 140);
+    color: white;
+    width: 150px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    /* margin: 8% auto; */
+    border-radius: 10px;
+}
+
+.labirinto {
+    background-color: white;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: flex-end; */
+    border-radius: 10px;
+}
+
+.maior {
+    width: 600px;
+    height: 600px;
+    background: black;
+    margin: 3% auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

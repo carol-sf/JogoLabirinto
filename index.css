@@ -23,7 +23,7 @@
     border-radius: 25px;
 }
 
-.campo {
+#campo {
     background-color: black;
     height: 100vh;
     display: flex;
@@ -33,11 +33,13 @@
 
 .labirinto {
     background-color: white;
-    padding: 2%;
-    width: 80%;
+    width: 70%;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
 }
 
-#labirintoInicio {
+#inicio {
     /* width: 55px; */
     /* height: 55px; */
     background-color: aqua;
@@ -45,4 +47,12 @@
     /* color: white; */
     font-weight: bold;
     font-size: 16pt;
+}
+
+#chegada {
+    background-color: aqua;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 16pt;
+    width: 15%;
 }

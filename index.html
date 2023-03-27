@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,26 @@
     <title>Jogo do Labirinto</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <main>
-        <div class="campo">
+        <div id="campo">
             <div id="status">
                 <h2 id="status-titulo">Você perdeu!</h2>
                 <button id="btnTentarNovamente">Tentar novamente</button>
             </div>
-            <div id="labirintoInicio">
-                Inicio
+            <div class="labirinto">
+                <div id="inicio" class="inicio-fim">
+                    Inicio
+                </div>
+                - - - - - - - - >
+                <div id="chegada" class="inicio-fim">
+                    Chegada
+                </div>
             </div>
-            <div class="labirinto"></div>
         </div>
     </main>
     <script src="index.js"></script>
 </body>
+
 </html>
