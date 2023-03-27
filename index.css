@@ -14,27 +14,20 @@
 }
 
 #status {
-    display: none;
-}
-
-/* #status {
-    display: block;
     background-color: white;
     position: fixed;
-    width: 70%;
-    height: 70%;
+    width: 40%;
+    height: 50%;
     border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    display: none;
 }
 
 #status-titulo {
     font-size: 50pt;
 }
 
-#status-botao {
+#btnTentarNovamente {
     background-color: red;
     color: white;
     border-style: none;
@@ -43,4 +36,4 @@
     padding: 2% 6%;
     font-size: 18pt;
     border-radius: 25px;
-} */
+}
